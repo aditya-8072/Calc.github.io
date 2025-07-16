@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya Kumar | Enhanced Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Simple Calculator</h1>
+
+  <div class="toggle-container">
+    <label>
+      <input type="checkbox" id="themeToggle"> Dark Mode
+    </label>
+  </div>
+
+  <div class="calculator">
+    <input type="text" id="result" readonly />
+
+    <div class="buttons">
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button class="operator" onclick="appendOperator('+')">+</button>
+
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button class="operator" onclick="appendOperator('-')">-</button>
+
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button class="operator" onclick="appendOperator('*')">*</button>
+
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendOperator('/')">/</button>
+      <button onclick="appendDot()">.</button>
+      <button onclick="backspace()">←</button>
+
+      <button class="clear" onclick="clearResult()">C</button>
+      <button class="equals" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <div class="history">
+    <h3>🧾 Calculation History</h3>
+    <ul id="historyList"></ul>
+  </div>
+<script src="script.js"></script>
+
+</body>
+</html>
